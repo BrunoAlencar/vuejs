@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vuejs Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="message">
+    <div @click="alert('this is true man!')">
+      {{ message? message : "No message here!" }}
+    </div>
+    <button @click="message = 'bullshit'">Change message!</button>
+    <hr>
+    <button @click="call">New message?</button>
+
+  </div>
+
+  <script src="../node_modules/vue/dist/vue.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
