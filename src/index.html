@@ -18,6 +18,14 @@
     <button @click="message = 'bullshit'">Change message!</button>
     <hr>
     <button @click="call">New message?</button>
+    <hr>
+    <button @click="addItem">add item</button>
+    <ul>
+      <li v-for="(item,index) in array">
+        {{ item }}
+        <button @click="editItem(item, index)">Edit</button>
+      </li>
+    </ul>
 
   </div>
 
