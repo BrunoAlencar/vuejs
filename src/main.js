@@ -22,6 +22,9 @@ var vue = new Vue({
         editItem: function (item, index) {
             this.array.splice(index, 1, prompt('Edit item', item));
             console.log(this.array)
+        },
+        deleteItem: function (index) {
+            this.array.splice(index, 1);
         }
     }
 })
