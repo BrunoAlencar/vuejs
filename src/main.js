@@ -20,7 +20,7 @@ var vue = new Vue({
             this.array.push(prompt('New item'))
         },
         editItem: function (item, index) {
-            this.array[index] = prompt('Edit item', item)
+            this.array.splice(index, 1, prompt('Edit item', item));
             console.log(this.array)
         }
     }
