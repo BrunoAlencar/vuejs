@@ -21,7 +21,7 @@
     <hr>
     <button @click="addItem">add item</button>
     <ul>
-      <li v-for="(item,index) in array">
+      <li v-for="(item,index) in array" v-if="item !== null && item != ''">
         {{ item }}
         <button @click="editItem(item, index)">Edit</button>
         <button @click="deleteItem(index)">Delete</button>
@@ -30,7 +30,7 @@
 
   </div>
 
-  <script src="../node_modules/vue/dist/vue.min.js"></script>
+  <script src="../node_modules/vue/dist/vue.js"></script>
   <script src="main.js"></script>
 </body>
 
